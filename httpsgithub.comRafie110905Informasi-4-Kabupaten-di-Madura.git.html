@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Wisata Madura</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            margin: 50px;
+            background-image: url('https://images.app.goo.gl/YiX9QNkP6z87XHBZ9');
+            background-size: cover;
+        }
+        button {
+            padding: 10px 20px;
+            margin: 10px;
+            font-size: 16px;
+            cursor: pointer;
+            background-color: rgba(0, 0, 0, 0.5); /* Warna latar belakang tombol */
+            border: none;
+            color: white;
+        }
+        #info {
+            margin-top: 20px;
+            border: 1px solid #ccc;
+            padding: 10px;
+            display: none;
+            background-color: rgba(0, 0, 0, 0.7); /* Latar belakang kotak informasi */
+        }
+        img {
+            max-width: 300px; /* Atur ukuran gambar sesuai kebutuhan */
+            margin: 5px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Pilih Kabupaten di Madura</h1>
+    <button onclick="showInfo('bangkalan')">Bangkalan</button>
+    <button onclick="showInfo('sampang')">Sampang</button>
+    <button onclick="showInfo('sumenep')">Sumenep</button>
+    <button onclick="showInfo('pamekasan')">Pamekasan</button>
+
+    <div id="info"></div>
+
+    <script>
+        function showInfo(kabupaten) {
+            let info = document.getElementById('info');
+            let content = '';
+    
+            switch (kabupaten) {
+                case 'bangkalan':
+                    content = `
+                        <h2>Bangkalan</h2>
+                        <p><strong>Berita Menarik:</strong></p>
+                        <img src="Bangkalan.jpg" alt="Berita Bangkalan" style="width: 900px;">
+                        <p>Bangkalan baru saja meraih penghargaan sebagai kota ramah wisata.</p>
+                        
+                        <p><strong>Tempat Wisata:</strong></p>
+                        <img src="download.jpg" alt="Wisata Bangkalan">
+                        <p>Wisata Taman Paseban Alun-Alun Bangkalan.</p>
+                        
+                        <p><strong>Kuliner:</strong></p>
+                        <img src="download (1).jpg" alt="Kuliner Bangkalan">
+                        <p>Soto Bangkalan dan Rujak Cingur.</p>
+                        
+                        <p><strong>Event:</strong></p>
+                        <img src="download (2).jpg" alt="Event Bangkalan">
+                        <p>Festival Karnaval Tradisional setiap bulan Agustus.</p>
+                    `;
+                    break;
+                case 'sampang':
+                    content = `
+                        <h2>Sampang</h2>
+                        <p><strong>Berita Menarik:</strong></p>
+                        <img src="Sampang - Copy.jpg" alt="Berita Sampang">
+                        <p>Sampang menjadi tuan rumah lomba seni budaya tahun ini.</p>
+                        
+                        <p><strong>Tempat Wisata:</strong></p>
+                        <img src="download (3).jpg" alt="Wisata Sampang">
+                        <p>Pantai Sembilangan dan Air Terjun Toroan.</p>
+                        
+                        <p><strong>Kuliner:</strong></p>
+                        <img src="Download (4).jpg" alt="Kuliner Sampang">
+                        <p>Dhun Adhun dan Lorjuk.</p>
+                        
+                        <p><strong>Event:</strong></p>
+                        <img src="Download (5).jpg" alt="Event Sampang">
+                        <p>Festival Sampang Rasa setiap bulan Oktober.</p>
+                    `;
+                    break;
+                case 'sumenep':
+                    content = `
+                        <h2>Sumenep</h2>
+                        <p><strong>Berita Menarik:</strong></p>
+                        <img src="Sumenep.jpg" alt="Berita Sumenep">
+                        <p>Sumenep dinobatkan sebagai kota wisata bersejarah.</p>
+                        
+                        <p><strong>Tempat Wisata:</strong></p>
+                        <img src="liburan-ke-gili-iyang.jpg" alt="Wisata Sumenep">
+                        <p>Wisata Gili Iyang Pulau Oksigen.</p>
+                        
+                        <p><strong>Kuliner:</strong></p>
+                        <img src="Download (6).jpg" alt="Kuliner Sumenep">
+                        <p>Nasi Jagung dan Sate Sumenep.</p>
+                        
+                        <p><strong>Event:</strong></p>
+                        <img src="Download (7).jpg" alt="Event Sumenep">
+                        <p>Pesta Laut di bulan September.</p>
+                    `;
+                    break;
+                case 'pamekasan':
+                    content = `
+                        <h2>Pamekasan</h2>
+                        <p><strong>Berita Menarik:</strong></p>
+                        <img src="Pamekasan - Copy.jpg" alt="Berita Pamekasan">
+                        <p>Pamekasan meraih penghargaan inovasi pariwisata.</p>
+                        
+                        <p><strong>Tempat Wisata:</strong></p>
+                        <img src="Download (8).jpg" alt="Wisata Pamekasan">
+                        <p>Pantai Potoan dan Taman Adhiguna.</p>
+                        
+                        <p><strong>Kuliner:</strong></p>
+                        <img src="Download (9).jpg" alt="Kuliner Pamekasan">
+                        <p>Rujak Soto dan Bebek Pamekasan.</p>
+                        
+                        <p><strong>Event:</strong></p>
+                        <img src="Download (10).jpg" alt="Event Pamekasan">
+                        <p>Festival Seni Pamekasan pada bulan April.</p>
+                    `;
+                    break;
+                default:
+                    content = 'Pilih kabupaten untuk melihat informasi.';
+            }
+    
+            info.innerHTML = content;
+            info.style.display = 'block';
+        }
+    </script>
+    
